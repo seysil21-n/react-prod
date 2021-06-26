@@ -1,0 +1,277 @@
+*,label{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content_dashboard_container{
+    /* border: solid 1px red; */
+    display: grid;
+    justify-items: start;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 400px;
+    width: 100%;
+    overflow: auto;
+}
+
+.container_content  {
+    width: 100%;
+    /* transform: translateY(120px); */
+
+}
+
+.destination_details{
+    display: grid;
+    grid-template-rows: 20px 80px 50px 50px 50px 50px;
+    grid-gap: 10px;
+}
+
+.networks{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 60px 60px 60px 60px;
+    padding: 10px;
+    grid-gap: 20px;
+
+}
+
+.network{
+    border-radius: 50%;
+    border: 1px solid rgb(205, 205, 205);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+}
+
+.network div{
+    background-color: rgba(0, 144, 79, 0.9);
+    width: 40%;
+    height: 40%;
+    display: grid;
+    place-items: center;
+    border-radius: inherit;
+    color: white;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    right: 0;
+    transition: all 1s ease;
+    animation-name: scaleAnime;
+    animation-duration: 0.3s;
+    /* border: 2px solid rgb(255, 255, 255); */
+}
+
+@keyframes scaleAnime {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.network:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: rgba(137, 0, 0, 0.6);
+}
+
+.transfer_details{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+/* input[type="text"], input[type="number"], input[type="email"]{
+    padding-left: 10px;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 10px;
+}
+
+input[type="text"]:active, input[type="text"]:visited ,input[type="text"]:focus ,input[type="number"]:active
+,input[type="number"]:visited, input[type="number"]:focus, input[type="email"]:active, input[type="email"]:visited,
+input[type="email"]:focus
+{
+    border : 3px solid rgba(255, 0, 123,  0.3);
+    outline: none;
+
+} */
+
+.cdi{
+    padding-left: 10px;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 5px;
+}
+
+.cdi:active, .cdi:visited ,.cdi:focus
+{
+    border : 2px solid rgba(255, 0, 123,  0.3);
+    outline: none;
+
+}
+
+.btn_send{
+    background-color: hotpink;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* .transfer_details div{
+    /* border: solid red 1px; 
+} */
+
+.providers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.provider_select{
+    position: relative;
+    /* z-index: 2; */
+    /* background: #000; */
+    display: grid;
+    justify-items: center;
+    background-color: #F6F7F8;
+    border-radius: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.provider_name{
+    
+    position: absolute;
+    /* background-color:; */
+    /* background: #000; */
+    top: 20px;
+    /* width: 20%; */
+    height: 20%;
+    padding: 20px;
+}
+
+input[type='checkbox']{
+    width: 20%;
+    height: 20%;
+}
+
+.send{
+    border-radius: 20px;
+    border: 1px solid gray;
+    background: #F6F7F8;
+    padding-left: 20px;
+    font-size: 1.8rem;
+}
+
+.sendContainer{
+    position: relative;
+}
+
+.sendContainer span{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+}
+
+.confirm_transfer {
+    width: 100%;
+    height: 100%;
+    background: rgba(103, 103, 103, 0.2);
+    z-index: 11;
+    display: none;
+    /* place-content: center; */
+    justify-items: center;
+    align-items: center;
+}
+
+.confirm_transfer_inner{
+    width: 40%;
+    min-width: 350px;
+    height: auto;
+    min-height: 300px;
+    max-height: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 10px rgb(219, 219, 219);
+    display: grid;
+    /* justify-content: center; */
+    grid-template-rows: 50px 80px 70px 50px;
+    animation-name: scaleAnime;
+    animation-duration: 0.5s;
+}
+
+.confirm_btn{
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+    align-items: center;
+}
+
+.confirm_btn:hover{
+    background-color: rgb(0, 162, 0);
+}
+
+.loadPre {
+    text-align: center;
+}
+
+
+.successMessage{
+    position: fixed;
+    width: 50%;
+    height: 20%;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: gray;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.successMessage p, .successMessage h5{
+    margin: 0;
+    padding: 0;
+}
+
+.successMessage h5{
+    align-self: center;
+    color: green;
+}
+
+.successMessage p, .loader{
+    align-self: start;
+}
+
+.smc{
+    background: rgba(129, 129, 129, 0.6);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    backdrop-filter: blur(2px);
+
+}
+

@@ -1,0 +1,88 @@
+.registerContainer{
+    display: grid;
+     justify-items: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(249, 249, 249);
+    /* width: 50%; */
+}
+
+.center{
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    min-width: 400px;
+    width: 40%;
+}
+
+
+.logo{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: blueviolet;
+}
+
+.successMessage, .cusLoaderInner{
+    position: fixed;
+    width: 50%;
+    height: 20%;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: gray;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.successMessage p, .successMessage h5{
+    margin: 0;
+    padding: 0;
+}
+
+.successMessage h5{
+    align-self: end;
+    color: green;
+}
+
+.successMessage p, .loader{
+    align-self: start;
+}
+
+.smc, .cusLoader{
+    background: rgba(173, 173, 173, 0.6);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    backdrop-filter: blur(1px);
+
+}
+
+.cusLoaderInner{
+    position: fixed;
+    width: 10%;
+    height: 20%;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: gray;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    min-width: 120px;
+}

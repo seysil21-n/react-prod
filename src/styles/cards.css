@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cards_container{
+    display: grid;
+    justify-items: start;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 400px;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    overflow: auto;
+    position: relative;
+}
+
+.cards_inner_container{
+    width: inherit;
+    padding-bottom: 50px;
+    /* transform: translateY(120px); */
+
+}
+
+.cards_header{
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 70px 40px;
+    align-items: center;
+    color: rgb(88, 88, 88);
+    align-items: start;
+    margin-bottom: 10px;
+
+}
+
+.addNewBtn{
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgb(234, 234, 234);
+    color: rgb(99, 99, 99);
+    font-size: 0.7rem;
+}
+
+.addNewBtn:hover{
+    transform: scale(1.2) rotate(20deg);
+    transition: all 0.4s ease;
+
+}
+
+.addNewBtn:active {
+    background-color: rgba(255, 105, 180, 0.709);
+
+}
+
+
+
+.cardd{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid rgb(217, 217, 217);
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: 20px 1fr;
+    /* backdrop-filter: blur(10px); */
+    background-position: top;
+    /* background-size: cover; */
+    /* visibility: ; */
+    position: relative;
+    z-index: 2;
+}
+
+.stack{
+    margin: auto;
+    width: 90%;
+    height: 15px;
+    background-color: rgba(231, 231, 231, 0.456);
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    border-radius: 20px 20px 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(.7px);
+}
+
+.cardd:active,.cardd:focus,.cardd:visited, .cardd:hover{
+    box-shadow: 0 1px 10px rgb(224, 224, 224);
+    transform: scale(1.02);
+    transition: 0.4s ease all
+}
+
+.card_details_header{
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.card_details{
+    align-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+
+}
+
+.cardInput{ 
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 0.7rem;
+    color: rgb(28, 28, 28);
+    background-color: rgba(255, 255, 255, 0.853);
+    border: 1px solid rgba(0, 128, 0, 0);
+
+}
+
+.cardInput:focus,
+.cardInput:active,
+.cardInput:visited{
+    outline: none;
+    border: 1px solid rgba(57, 57, 57, 0.641);
+}
+
+
+
+.cardInput::placeholder{
+    color: rgb(150, 150, 150);
+}
+
+
+.cards_created{
+    width: 100%;
+    /* border: 1px solid gray; */
+
+    margin-top: 40px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px;
+    grid-auto-rows: 80px;
+    grid-gap: 10px;
+    /* border-radius: 5px; */
+}
+
+.cards_item{
+    display: grid;
+    grid-template-columns: 1fr 25px 50px;
+    align-items: center;
+    /* justify-items: center   ; */
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 5px;
+    padding: 0 10px;
+    color: rgb(81, 81, 81);
+    animation-name: scaleAnime;
+    animation-duration: 0.3s;
+    grid-column-gap: 10px;
+
+}
+
+.selectedCard{
+    padding: 5px 1px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    /* height: 20px; */
+    font-size: 0.7rem;
+    /* margin-right: 20px; */
+    color: rgb(78, 78, 78);
+    border: 1px solid green;
+    animation-name: bounceIn ;
+    animation-duration: 1s;
+}
+
+@keyframes bounceIn{
+    0% {
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.cards_item:hover{
+    background: #faf3f3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 10px rgb(239, 239, 239);
+    border: 1px solid green  ;
+}
+
+h6{
+    margin: 0;
+}
+
+.validation{
+    padding: 10px 10px;
+
+    border-radius: 5px;
+
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: red
+
+}
+
+.loading{
+    display: grid;
+    /* justify-content: center; */
+    place-content: center ;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@keyframes scaleAnime {
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.cardNumber_txt{
+    padding: 5px 10px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 5px;
+}
+
+.switchCard{
+    padding: 10px 10px;
+    width: 400px;
+    border: 1px green solid;
+    position: fixed;
+    bottom: 50px;
+    background: rgb(192, 252, 192) ;
+    color: rgb(64, 64, 64);
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    align-items: center;
+    animation-name: swipeleft;
+    animation-duration: 0.2s;
+}
+
+.scn{
+    background: rgb(65, 131, 65);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@keyframes swipeleft{
+    0% {
+        transform: translateY(30px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes swipeDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(30px);
+    }
+}
