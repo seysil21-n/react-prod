@@ -24,7 +24,7 @@ export class Dashbaord extends Component {
     loadSession = async () => {
 
         
-        const session = await axios.get('http://147.182.135.17:80/api/users/dashboard', { 
+        const session = await axios.get('http://147.182.135.17:3000/api/users/dashboard', { 
             headers: {
                 'Accept': 'application/json',
                 'x-auth-token': sessionStorage.getItem('token')

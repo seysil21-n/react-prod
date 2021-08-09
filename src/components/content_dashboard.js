@@ -48,7 +48,7 @@ export class content_dashboard extends Component {
 
     selectedCard = async () => {
         try {
-            const response  = await axios.get('http://147.182.135.17:80/api/users/cards/selectedCard', {headers: 
+            const response  = await axios.get('http://147.182.135.17:3000/api/users/cards/selectedCard', {headers: 
             {'accept': 'Application/json' , 'x-auth-token': sessionStorage.getItem('token')}})
 
             console.log(response)
@@ -148,7 +148,7 @@ export class content_dashboard extends Component {
             // only show modal to confirm if user exist if all fields has been filled
             document.querySelector('.confirm_transfer').style.display = 'grid'
             console.log('all')
-            let response = await axios.post('http://147.182.135.17:80/api/users/confirmDestination', 
+            let response = await axios.post('http://147.182.135.17:3000/api/users/confirmDestination', 
             {receipientInfo: this.state.receipientInfo, network: this.state.network},
             {headers: {'Content-type': 'application/json', 'x-auth-token': sessionStorage.getItem('token')}})
 
@@ -205,7 +205,7 @@ export class content_dashboard extends Component {
     }
 
     creditAccount = async () => {
-        const response  = await axios.post('http://147.182.135.17:80/api/users/creditAccount',
+        const response  = await axios.post('http://147.182.135.17:3000/api/users/creditAccount',
         {destinationEmail: this.state.destinationEmail, amount: this.state.amount, sender: this.props.user.email},
         {headers: {'content-type' : 'application/json', 'x-auth-token': sessionStorage.getItem('token')}}
         

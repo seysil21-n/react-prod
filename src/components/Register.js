@@ -44,7 +44,7 @@ export class Register extends Component {
   }
 
   registerUser = async () => {
-    const response = await axios.post('http://147.182.135.17:80/api/users/register', 
+    const response = await axios.post('http://147.182.135.17:3000/api/users/register', 
     {fullName: this.state.fullName, email: this.state.email, password: this.state.password, phone: this.state.phone} ,
     {headers: {'Content-type': 'application/json' } })
 
