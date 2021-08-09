@@ -77,7 +77,7 @@ export class Cards extends Component {
     fetchCards = async () =>{
         try {
             // await fetching card response
-            let response = await axios.get('http://localhost:4000/api/users/cards', 
+            let response = await axios.get('http://10.0.2.15:3000/api/users/cards', 
              {headers: {'Accept': 'application/json', 'x-auth-token': sessionStorage.getItem('token')}})
             
              console.log(response)
@@ -103,7 +103,7 @@ export class Cards extends Component {
             this.setState({loading: true})
 
             // try posting
-            let response = await axios.post('http://localhost:4000/api/users/cards/add', {cvv: this.state.cardCvv, number: this.state.cardNumber, exp:this.state.cardExp},
+            let response = await axios.post('http://10.0.2.15:3000/api/users/cards/add', {cvv: this.state.cardCvv, number: this.state.cardNumber, exp:this.state.cardExp},
              {headers: {'x-auth-token': sessionStorage.getItem('token'),
             'Content-Type': 'application/json',
             'Accept': 'application/json'
@@ -141,7 +141,7 @@ export class Cards extends Component {
     changeCard = async (card) => {
 
         try {
-            const response  = await axios.post('http://localhost:4000/api/users/cards/switch',
+            const response  = await axios.post('http://10.0.2.15:3000/api/users/cards/switch',
             {updatedCard: card._id, updatedCardNumber: card.cardNumber, updatedCardBalance: card.balance},
             {headers: {'content-type' : 'application/json', 'x-auth-token': sessionStorage.getItem('token')}}
             

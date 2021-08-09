@@ -18,8 +18,6 @@ export class Register extends Component {
       valErrors: '',
       passwordNm: '',
       success: ''
-
-
     }
   }
 
@@ -46,7 +44,7 @@ export class Register extends Component {
   }
 
   registerUser = async () => {
-    const response = await axios.post('http://127.0.0.1:4000/api/users/register', 
+    const response = await axios.post('http://10.0.2.15:3000/api/users/register', 
     {fullName: this.state.fullName, email: this.state.email, password: this.state.password, phone: this.state.phone} ,
     {headers: {'Content-type': 'application/json' } })
 
