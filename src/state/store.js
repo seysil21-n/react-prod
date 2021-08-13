@@ -1,7 +1,7 @@
 // import {combineReducers,createStore} from 'redux'
 
 const {combineReducers,createStore} = require('redux')
-
+console.log('hi')
 // actions
 const cards = (cardID,cardNumber,cardBalance) => {
     return {
