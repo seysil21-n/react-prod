@@ -257,7 +257,7 @@ export class content_dashboard extends Component {
                         <input className='cdi' name="amount" onInput={this.getField} placeholder="Amount" type="number"  min="0" />
                         <p style={{display: this.state.confirmDestinationError !== '' ? 'block': 'none', color:'red', fontSize:'0.7rem'}}>{this.state.confirmDestinationError}</p>
                         <div className="btns">
-                            <button onClick={this.confirmDestination} className="btn_send">Send</button> <a href="#">Clear all</a>
+                            <button onClick={this.confirmDestination} className="btn_send">Send</button> <a href="#">Clear</a>
                         </div>
                     </div>
                 </div>
