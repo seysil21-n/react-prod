@@ -57,7 +57,7 @@ export class Login extends Component {
             
             <div className='registerContainer'>
             <Form className="center" md={6} onSubmit={this.props.submitLogin}>
-            <div className="logo">lexPay</div>
+            <div className="logo">lexPay1</div>
         <Row form>
           <Col md={12}>
             <FormGroup>
